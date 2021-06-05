@@ -1,0 +1,23 @@
+import java.io.*;
+public class RileReaderEx {
+	public static void main(String[] args) {
+		
+		try {
+			File f = new File("c:\\모광윤\\2021-1학기\\자바\\Hello.txt");
+			FileReader in = new FileReader(f);
+			int c;
+			while((c=in.read())!= -1) {	//한 글자씩 읽음 . 
+				System.out.print((char)c);
+			}
+			in.close();
+		}
+		catch(FileNotFoundException e) {
+			System.out.println("파일 열 수 없음");
+		}
+		catch(IOException e) {
+			System.out.println("입출력 오류");
+		}
+		
+		
+	}
+}

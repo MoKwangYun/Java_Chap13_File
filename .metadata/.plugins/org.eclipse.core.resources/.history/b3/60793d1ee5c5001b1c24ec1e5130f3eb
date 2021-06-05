@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class FileWriterEx {
+	public static void main(String[] args) {
+		InputStreamReader in = new InputStreamReader(System.in);
+		
+		FileWriter fw = null;
+		int c;
+		try {
+			fw = new FileWriter("c:\\¸ð±¤À±\\2021-1ÇÐ±â\\ÀÚ¹Ù\\FileWriterEx.txt");
+			while((c = in.read()) != -1) {
+				fw.write((char)c);
+				System.out.println((char)c);
+			}
+			in.close();
+			fw.close();
+		}
+		catch(FileNotFoundException e) {
+			System.out.println("File not found");
+		}
+		catch(IOException e) {
+			System.out.println("File not open");
+		}
+		
+	}
+}

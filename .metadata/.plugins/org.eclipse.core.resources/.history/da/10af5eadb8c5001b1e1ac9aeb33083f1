@@ -1,0 +1,13 @@
+import java.io.*;
+
+public class FileReader {
+
+	public static void main(String[] args) {
+		
+		try {
+			File file = new File("c:\\¸ð±¤À±\\2021-1ÇÐ±â\\ÀÚ¹Ù\\Hello.txt");
+			FileReader in = new FileReader(file);
+			
+		}
+	}
+}

@@ -1,0 +1,26 @@
+import java.io.*;
+public class RileReaderEx {
+	public static void main(String[] args) {
+		
+	
+		
+		try {
+			 File file    =  new File("c:\\모광윤\\2021-1학기\\자바\\Hello.txt");
+			   
+			   BufferedReader br  =  new BufferedReader(new InputStreamReader(new FileInputStream(file),"euc-kr"));
+
+			String line    =  null;
+
+			if((line=br.readLine()) != null){
+			System.out.println(line);
+			}
+			br.close();
+		}
+		catch(FileNotFoundException e) {
+			System.out.println("파일 열 수 없음");
+		}
+		catch(IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+}
